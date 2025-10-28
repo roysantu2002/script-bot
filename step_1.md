@@ -38,3 +38,8 @@ content='' usage=None model='gemini-2.5-flash' finish_reason='2'
 ### Step 1
 Step 1: Implementation step 1 for Restart VM
 content='- name: Ensure the VM is powered off before restarting\n  ansible.builtin.command: "virsh shutdown {{ vm_name }}"\n  register: shutdown_result\n  ignore_errors: yes\n\n- name: Wait for the VM to be powered off\n  ansible.builtin.wait_for:\n    timeout: 300\n    state: stopped\n    delay: 10\n    path: "/var/run/libvirt/qemu/{{ vm_name }}.pid"\n\n- name: Restart the VM\n  ansible.builtin.command: "virsh start {{ vm_name }}"\n  when: shutdown_result.rc == 0 or shutdown_result.rc == 1  # 1 indicates the VM was already off\n\n- name: Wait for the VM to be running\n  ansible.builtin.wait_for:\n    timeout: 300\n    state: started\n    delay: 10\n    path: "/var/run/libvirt/qemu/{{ vm_name }}.pid"' usage={'prompt_tokens': 78, 'completion_tokens': 195, 'total_tokens': 273} model='gpt-4o-mini-2024-07-18' finish_reason='stop'
+
+
+### Step 1
+Step 1: Implementation step 1 for Restart VM
+content='- name: Restart VM\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: false\n    name: "{{ vm_name }}"\n    state: restarted' usage=None
