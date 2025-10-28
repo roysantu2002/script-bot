@@ -7,31 +7,31 @@
   tasks:
     - name: Step 1 - Implementation step 1 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='- name: Restart VM\n  community.vmware.vmware_guest:\n    hostname: \"{{ vcenter_hostname }}\"\n    username: \"{{ vcenter_username }}\"\n    password: \"{{ vcenter_password }}\"\n    validate_certs: false\n    name: \"{{ vm_name }}\"\n    state: restarted' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 2 - Implementation step 2 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 3 - Implementation step 3 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='- name: Wait for VM to be reachable after restart\n  ansible.builtin.wait_for_connection:\n    timeout: 300' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_hostname == 'target_vm_name'\""
     - name: Step 4 - Implementation step 4 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == \"kvm\"'"
     - name: Step 5 - Implementation step 5 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 6 - Implementation step 6 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == \"kvm\"'"
     - name: Step 7 - Implementation step 7 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 8 - Implementation step 8 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 9 - Implementation step 9 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content=\"- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'\""
     - name: Step 10 - Implementation step 10 for Restart VM
       debug:
-        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='' usage=None"
+        msg: "Placeholder task generated because AI did not produce a valid Ansible task. Raw: content='- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == \"kvm\"'"

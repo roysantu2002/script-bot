@@ -43,3 +43,8 @@ content='- name: Ensure the VM is powered off before restarting\n  ansible.built
 ### Step 1
 Step 1: Implementation step 1 for Restart VM
 content='- name: Restart VM\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: false\n    name: "{{ vm_name }}"\n    state: restarted' usage=None
+
+
+### Step 1
+Step 1: Implementation step 1 for Restart VM
+content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'"

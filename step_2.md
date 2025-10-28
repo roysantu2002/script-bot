@@ -13,3 +13,8 @@ content='- name: Ensure the virtual machine is powered off before restart\n  ans
 ### Step 2
 Step 2: Implementation step 2 for Restart VM
 content='' usage=None
+
+
+### Step 2
+Step 2: Implementation step 2 for Restart VM
+content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'"

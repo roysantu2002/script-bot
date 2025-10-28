@@ -13,3 +13,8 @@ content='- name: Ensure the virtual machine is powered off before restart\n  ans
 ### Step 3
 Step 3: Implementation step 3 for Restart VM
 content='- name: Wait for VM to be reachable after restart\n  ansible.builtin.wait_for_connection:\n    timeout: 300' usage=None
+
+
+### Step 3
+Step 3: Implementation step 3 for Restart VM
+content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_hostname == 'target_vm_name'"

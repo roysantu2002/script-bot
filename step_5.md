@@ -13,3 +13,8 @@ content='- name: Check if the VM is running\n  command: virsh domstate my_vm\n  
 ### Step 5
 Step 5: Implementation step 5 for Restart VM
 content='' usage=None
+
+
+### Step 5
+Step 5: Implementation step 5 for Restart VM
+content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'"
