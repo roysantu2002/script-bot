@@ -18,3 +18,8 @@ content='' usage=None
 ### Step 8
 Step 8: Implementation step 8 for Restart VM
 content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'"
+
+
+### Step 8
+Step 8: Implementation step 8 for Restart VM
+content='- name: Restart the virtual machine\n  ansible.builtin.shell: |\n    virsh shutdown {{ vm_name }} || true\n    virsh start {{ vm_name }}\n  register: vm_restart\n  ignore_errors: yes\n\n- name: Wait for the VM to be up\n  ansible.builtin.wait_for:\n    port: 22\n    delay: 10\n    timeout: 300\n    state: started\n    host: "{{ vm_ip }}"' usage={'prompt_tokens': 74, 'completion_tokens': 96, 'total_tokens': 170} model='gpt-4o-mini-2024-07-18' finish_reason='stop'

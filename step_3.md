@@ -18,3 +18,8 @@ content='- name: Wait for VM to be reachable after restart\n  ansible.builtin.wa
 ### Step 3
 Step 3: Implementation step 3 for Restart VM
 content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_hostname == 'target_vm_name'"
+
+
+### Step 3
+Step 3: Implementation step 3 for Restart VM
+content='- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == "kvm"' usage={'prompt_tokens': 74, 'completion_tokens': 33, 'total_tokens': 107} model='gpt-4o-mini-2024-07-18' finish_reason='stop'

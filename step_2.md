@@ -18,3 +18,8 @@ content='' usage=None
 ### Step 2
 Step 2: Implementation step 2 for Restart VM
 content="- name: Restart the virtual machine\n  ansible.builtin.command: shutdown -r now\n  when: ansible_virtualization_type == 'kvm'"
+
+
+### Step 2
+Step 2: Implementation step 2 for Restart VM
+content='- name: Restart the virtual machine\n  ansible.builtin.shell: |\n    virsh shutdown {{ vm_name }}\n    while virsh list --state-running | grep -q {{ vm_name }}; do\n      sleep 5\n    done\n    virsh start {{ vm_name }}\n  register: restart_vm_result\n\n- name: Wait for the VM to become reachable\n  ansible.builtin.wait_for:\n    host: "{{ vm_ip }}"\n    port: 22\n    delay: 10\n    timeout: 300\n    state: started' usage={'prompt_tokens': 74, 'completion_tokens': 114, 'total_tokens': 188} model='gpt-4o-mini-2024-07-18' finish_reason='stop'
