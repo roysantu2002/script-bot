@@ -1,3 +1,3 @@
-# Restart vm
+# Restart VM
 
 Generated automation script.
