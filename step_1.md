@@ -28,3 +28,8 @@ content='```yaml\n- name: Create an empty file\n  ansible.builtin.copy:\n    des
 ### Step 1
 Step 1: content='' usage=None model='gemini-2.5-flash' finish_reason='2'
 content='```yaml\n- name: Create an empty file\n  ansible.builtin.copy:\n    content: ""\n    dest: /path/to/your/empty_file.txt # Replace with your desired file path\n    mode: \'0644\' # Optional: set file permissions\n```' usage=None model='gemini-2.5-flash' finish_reason='1'
+
+
+### Step 1
+Step 1: Implementation step 1 for Restart VM
+content='' usage=None model='gemini-2.5-flash' finish_reason='2'

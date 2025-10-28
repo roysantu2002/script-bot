@@ -1,1 +1,37 @@
-content='\n- name: Create an empty file\n  ansible.builtin.copy:\n    content: ""\n    dest: /path/to/your/empty_file.txt # Replace with your desired file path\n    mode: \'0644\' # Optional: set file permissions\n' usage=None model='gemini-2.5-flash' finish_reason='1'
+---
+- name: Restart VM
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    - name: Step 1 - Implementation step 1 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 2 - Implementation step 2 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 3 - Implementation step 3 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 4 - Implementation step 4 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 5 - Implementation step 5 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 6 - Implementation step 6 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 7 - Implementation step 7 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 8 - Implementation step 8 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='- name: Wait for the VM to become reachable via SSH after restart\n  ansible.builtin.wait_for_connection:\n    timeout: 300 # Wait up to 5 minutes for the VM to become reachable\n    delay: 10    # Check every 10 seconds for connectivity' usage=None model='gemini-2.5-flash' finish_reason='1'"
+    - name: Step 9 - Implementation step 9 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
+    - name: Step 10 - Implementation step 10 for Restart VM
+      debug:
+        msg: "Placeholder task generated because AI did not produce a valid ansible task. Raw: content='' usage=None model='gemini-2.5-flash' finish_reason='2'"
