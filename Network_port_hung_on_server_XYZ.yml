@@ -1,0 +1,17 @@
+---
+- name: Network port hung on server XYZ
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    content='' usage=None
+    content='- name: Implementation step 2 for Network port hung on server XYZ\n  ansible.builtin.service:\n    name: NetworkManager\n    state: restarted' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='' usage=None
