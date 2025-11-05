@@ -1,0 +1,17 @@
+---
+- name: Restart VM
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    content='' usage=None
+    content='' usage=None
+    content='- name: Step 3: Implementation step 3 for Restart VM\n  tasks:\n    - name: Verify the restarted VM is reachable via SSH\n      ansible.builtin.wait_for_connection\n      delay: 10\n      timeout: 300' usage=None
+    content='- name: Power on the VM\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: false\n    name: "{{ vm_name }}"\n    state: poweredon' usage=None
+    content='' usage=None
+    content='- name: Perform VM restart via vCenter\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: false\n    name: "{{ vm_name }}"\n    ' usage=None
+    content='- name: Restart the virtual machine\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: no\n    name: "{{ vm_name }}"\n    state: restarted\n  delegate_to: localhost' usage=None
+    content='' usage=None
+    content='' usage=None
+    content='- name: Restart the specified virtual machine\n  community.vmware.vmware_guest:\n    hostname: "{{ vcenter_hostname }}"\n    username: "{{ vcenter_username }}"\n    password: "{{ vcenter_password }}"\n    validate_certs: no\n    name: "{{ vm_name }}"\n    state: restarted' usage=None
