@@ -1,0 +1,34 @@
+---
+- name: Restart a windows VM
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:
+        msg: "Restarting the Windows VM"
+        timeout: 600
+        pre_reboot_delay: 5
+        post_reboot_delay: 10'
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:
+        reboot_timeout: 600'
+    - name: Restart the Windows VM
+      win_reboot:
+        reboot_timeout: 600
+        test_command: whoami'
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:'
+    - name: Restart the Windows VM
+      win_reboot:'
