@@ -1,0 +1,17 @@
+---
+- name: Restart Ubuntu Cloud VM
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+  - name: Execute restart command on Ubuntu Cloud VM\n  ansible.builtin.shell: |\n    sudo reboot\n  register: restart_result\n  ignore_errors: yes\n\n- name: Check if restart command executed successfully\n  ansible.builtin.fail:\n    msg: "Restart command failed"\n  when: restart_result.rc != 0\n\n- name: Wait for the VM to become reachable after restart\n  ansible.builtin.wait_for:\n    host: "{{ inventory_hostname }}"\n    port: 22\n    delay: 10\n    timeout: 300\n    state: started\n\n- name: Check VM status post-restart\n  ansible.builtin.command: uptime\n  register: vm_status\n\n- name: Notify user of restart completion\n  ansible.builtin.debug:\n    msg: "Restart completed successfully. VM status: {{ vm_status.stdout }}"\n\n- name: Define timeout duration variable\n  ansible.builtin.set_fact:\n    timeout_duration: 300'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.shell: |\n    sudo shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
+  - name: Restart Ubuntu Cloud VM\n  ansible.builtin.command: shutdown -r now\n  when: ansible_distribution == "Ubuntu" and ansible_virtualization_type == "cloud"'
