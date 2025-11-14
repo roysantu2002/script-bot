@@ -1,0 +1,77 @@
+---
+- name: How to login to Windows machine
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        host: "{{ windows_host }}"
+        port: 5986
+        transport: ssl'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        server: "{{ windows_host }}"
+        port: 5985
+        transport: "ntlm"'
+    - name: Log in to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        server: "{{ windows_host }}"
+        port: 5985
+        transport: "plaintext"'
+    - name: Log in to the Windows machine using WinRM
+      winrm:
+        host: "{{ inventory_hostname }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        port: 5986
+        transport: ssl'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        host: "{{ inventory_hostname }}"
+        username: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        port: 5986
+        transport: ssl'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        host: "{{ windows_host }}"
+        port: 5986
+        transport: ssl'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        host: "{{ inventory_hostname }}"
+        user: "{{ ansible_user }}"
+        password: "{{ ansible_password }}"
+        port: 5986
+        transport: ssl'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ username }}"
+        password: "{{ password }}"
+        server: "{{ inventory_hostname }}"
+        port: 5986
+        validate_certs: no'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        server: "{{ windows_host }}"
+        port: 5985
+        transport: "ntlm"'
+    - name: Login to Windows machine using WinRM
+      winrm:
+        user: "{{ windows_user }}"
+        password: "{{ windows_password }}"
+        host: "{{ windows_host }}"
+        port: 5986
+        transport: ssl'
