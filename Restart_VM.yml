@@ -1,0 +1,37 @@
+---
+- name: Restart VM
+  hosts: all
+  become: yes  # Run tasks with privilege escalation (e.g., sudo)
+  gather_facts: yes  # Gather system facts about the remote hosts
+
+  tasks:
+    - name: Restart the specified virtual machine
+      community.vmware.vmware_guest:
+        name: my_vm_to_'
+    - name: Restart the virtual machine
+      community.general.vmware_guest:
+        hostname: "{{ vcenter_hostname }}"
+    '
+    - name: Restart the VM
+      ansible.builtin.reboot:
+        reboot_timeout: 600'
+    - name: Restart the VM
+      ansible.builtin.reboot:'
+    - name: Implementation step 5 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
+    - name: Implementation step 6 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
+    - name: Implementation step 7 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
+    - name: Implementation step 8 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
+    - name: Implementation step 9 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
+    - name: Implementation step 10 for Restart VM
+      debug:
+        msg: 'No valid YAML returned by AI for this step; manual implementation required.'
